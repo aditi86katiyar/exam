@@ -1,0 +1,17 @@
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/products")
+public class ProductController {
+
+    @Autowired
+    private ProductService productService;
+
+    // Other methods...
+
+    @PostMapping("/search")
+    public List<Product> searchProducts(@RequestBody Map<String, Object> attributes) {
+        return productService.searchProducts(attributes);
+    }
+}
