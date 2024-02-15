@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sample-deployment
+  name: boutique
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: sample-app
+      app: boutique
   template:
     metadata:
       labels:
-        app: sample-app
+        app: boutique-app
     spec:
       containers:
-      - name: sample-container
-        image: nginx:latest
+      - name: boutique-container
+        image: boutique.azurecr.io/boutiquefinal:v1
         ports:
         - containerPort: 80
