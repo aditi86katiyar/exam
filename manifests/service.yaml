@@ -4,7 +4,7 @@ metadata:
   name: boutique-service
 spec:
   selector:
-    app: boutique-app
+    app: boutique
   ports:
     - protocol: TCP
       port: 80
