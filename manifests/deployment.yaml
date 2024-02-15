@@ -16,4 +16,4 @@ spec:
       - name: boutique-container
         image: boutique.azurecr.io/boutiquefinal:v1
         ports:
-        - containerPort: 80
+        - containerPort: 90
