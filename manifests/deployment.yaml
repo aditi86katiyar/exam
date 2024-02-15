@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        app: boutique-app
+        app: boutique
     spec:
       containers:
       - name: boutique-container
