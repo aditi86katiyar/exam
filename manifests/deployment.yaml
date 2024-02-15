@@ -17,3 +17,5 @@ spec:
         image: boutique.azurecr.io/boutiquefinal:v1
         ports:
         - containerPort: 90
+      imagePullSecrets:
+      - name: acr-auth  # Name of the Docker registry secret
