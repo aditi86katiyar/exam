@@ -4,9 +4,9 @@ metadata:
   name: boutique-service
 spec:
   selector:
-    app: boutique
+    app: prachiboutique
+  type: NodePort
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 80
-  type: LoadBalancer
+      targetPort: 8080  # Assuming your application runs on port 8080

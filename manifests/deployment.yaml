@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: boutique
+  name: prachiboutique
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: boutique
+      app: prachiboutique
   template:
     metadata:
       labels:
-        app: boutique
+        app: prachiboutique
     spec:
       containers:
       - name: boutique-container
