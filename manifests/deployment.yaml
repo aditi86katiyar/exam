@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: boutique-container
-        image: nginx:latest
+        image: boutique.azurecr.io/boutiquefinal:v1
         ports:
         - containerPort: 80
       imagePullSecrets:
