@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: prachiboutique
+  name: prachi-boutique
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: prachiboutique
+      app: prachi-boutique
   template:
     metadata:
       labels:
-        app: prachiboutique
+        app: prachi-boutique
     spec:
       containers:
       - name: boutique-container
-        image: boutique.azurecr.io/boutiquefinal:v1
+        image: nginx:latest
         ports:
         - containerPort: 80
       imagePullSecrets:
-      - name: acr-auth-boutique  # Name of the Docker registry secret
+      - name: acr-auth-boutique
