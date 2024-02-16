@@ -18,4 +18,4 @@ spec:
         ports:
         - containerPort: 90
       imagePullSecrets:
-      - name: acr-auth1  # Name of the Docker registry secret
+      - name: acr-auth-boutique  # Name of the Docker registry secret
