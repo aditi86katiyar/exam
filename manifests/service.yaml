@@ -6,7 +6,8 @@ spec:
   selector:
     app: prachi-boutique
   ports:
-    - protocol: http
+    - name: http
+      protocol: TCP
       port: 8080
       targetPort: 8080
   type: LoadBalancer
