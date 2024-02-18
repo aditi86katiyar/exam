@@ -16,8 +16,6 @@ spec:
       - name: boutique-container
         image: boutique.azurecr.io/boutiquefinal:v1
         ports:
-        - name: http
-          containerPort: 8080
-          protocol: TCP
+        - containerPort: 80
       imagePullSecrets:
       - name: acr-auth-boutique
