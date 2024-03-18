@@ -5,11 +5,11 @@ name: boutiqueapp
             - main
     workflow_dispatch: {}
 env:
-    ACR_RESOURCE_GROUP: boutique
-    AZURE_CONTAINER_REGISTRY: boutique
+    ACR_RESOURCE_GROUP: boutique_group
+    AZURE_CONTAINER_REGISTRY: acrworkflow1710764197039
     CLUSTER_NAME: boutique
     CLUSTER_RESOURCE_GROUP: boutique_group
-    CONTAINER_NAME: image-workflow-1710763108579
+    CONTAINER_NAME: image-workflow-1710764197039
     DEPLOYMENT_MANIFEST_PATH: |
         ./manifests/deployment.yaml
         ./manifests/service.yaml
@@ -62,4 +62,4 @@ jobs:
                 action: deploy
                 images: ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:${{ github.sha }}
                 manifests: ${{ env.DEPLOYMENT_MANIFEST_PATH }}
-                namespace: namespace-workflow-1710763108579
+                namespace: namespace-workflow-1710764197039
