@@ -1,21 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: prachi-boutique
+  name: test
+  labels:
+    app: test
+  namespace: namespace-workflow-1710761233950
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: prachi-boutique
+      app: test
   template:
     metadata:
       labels:
-        app: prachi-boutique
+        app: test
     spec:
       containers:
-      - name: boutique-container
-        image: boutique.azurecr.io/boutiquefinal:v1
-        ports:
-        - containerPort: 80
-      imagePullSecrets:
-      - name: acr-auth-boutique
+        - name: test
+          image: acrworkflow1710761233950.azurecr.io/image-workflow-1710761233950:latest
+          ports:
+            - containerPort: 8080
