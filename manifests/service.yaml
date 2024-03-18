@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: prachi-boutique
+  name: test
+  namespace: namespace-workflow-1710761233950
 spec:
+  type: LoadBalancer
   selector:
-    app: prachi-boutique
+    app: test
   ports:
-    - name: http
-      protocol: TCP
+    - protocol: TCP
       port: 8080
       targetPort: 8080
-  type: LoadBalancer
